@@ -1,0 +1,8 @@
+{
+    "dataCards": [
+        { "namaKegiatan": "maulid", "deskripsi": "ini kegiatan maulid" },
+        { "namaKegiatan": "konser", "deskripsi": "ini kegiatan konser" },
+        { "namaKegiatan": "festival", "deskripsi": "ini kegiatan festival" },
+        { "namaKegiatan": "maulid", "deskripsi": "ini kegiatan maulid" }
+      ]
+}
