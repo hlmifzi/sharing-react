@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import { Carousel, Container, Row } from 'react-bootstrap'
 import background1 from './asset/bg-carousel.jpg'
 import NavbarComponent from './components/NavbarComponent'
 import EventCardsComponent from './components/EventCardsComponent'
+import axios from 'axios'
 function App() {
   const [angka, setAngka] = useState(3)
   const [index, setIndex] = useState(0);
-
+  const [dataCardDapetDariBackend, setDataCardDapetDariBackend] = useState([])
 
   const pengurangan = () => setAngka(angka - 1)
   const penambahan = () => setAngka(angka + 1)
@@ -17,17 +18,15 @@ function App() {
     setIndex(selectedIndex);
   };
 
-
-
   //data
   const iniObject = { namaKegiatan: 'maulid', deskripsi: 'ini kegiatan maulid' }
   const array = ['mobil', 'motor']
   //objectDalamArray
   const dataCards = [
-    { namaKegiatan: 'maulid', deskripsi: 'ini kegiatan maulid' },
-    { namaKegiatan: 'konser', deskripsi: 'ini kegiatan konser' },
-    { namaKegiatan: 'festival', deskripsi: 'ini kegiatan festival' },
-    { namaKegiatan: 'maulid', deskripsi: 'ini kegiatan maulid' },
+    { namaKegiatan: 'maulid Dummy', deskripsi: 'ini kegiatan maulid Dummy' },
+    { namaKegiatan: 'konser Dummy' , deskripsi: 'ini kegiatan konser Dummy' },
+    { namaKegiatan: 'festival Dummy', deskripsi: 'ini kegiatan festival Dummy' },
+    { namaKegiatan: 'maulid Dummy', deskripsi: 'ini kegiatan maulid Dummy' },
   ]
   const dataCarousels = [
     { namaKegiatan: background1, deskripsi: 'ini kegiatan maulid' },
@@ -35,6 +34,23 @@ function App() {
     { namaKegiatan: background1, deskripsi: 'ini kegiatan festival' },
     { namaKegiatan: background1, deskripsi: 'ini kegiatan maulid' },
   ]
+
+
+  const getDataCards = async () => {
+    try {
+      const response = await axios.get('https://my-json-server.typicode.com/hlmifzi/sharing-react/dataCards');
+      console.log("getDataCards -> response", response)
+      setDataCardDapetDariBackend(response.data)
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+
+  useEffect(() => {
+    getDataCards()
+  }, [])
+
 
   return (
     <>
@@ -86,7 +102,7 @@ function App() {
         </div>
         <Row>
           {
-            dataCards.map((v, i) => {
+            dataCardDapetDariBackend.map((v, i) => {
               return (
                 <EventCardsComponent
                   background={background1}
