@@ -1,15 +1,19 @@
 {
-    "menu":["beranda","profil","Ekstrakurikuler"],
+    "menu":[
+      {"id":0,"namaMenu":"beranda"},
+      {"id":1,"namaMenu":"profil"},
+      {"id":2,"namaMenu":"Ekstrakurikuler"}
+    ],
     "carousel":[
-      {"judul":"ini carouser 1", "deskripsi":"carousel 1 menjelaskan","background-url":"ini gambar 1"},
-      {"judul":"ini carouser 2", "deskripsi":"carousel 2 menjelaskan","background-url":"ini gambar 2"},
-      {"judul":"ini carouser 3", "deskripsi":"carousel 3 menjelaskan","background-url":"ini gambar 3"}
+      {"id":0,"judul":"ini carouser 1", "deskripsi":"carousel 1 menjelaskan","background-url":"ini gambar 1"},
+      {"id":1,"judul":"ini carouser 2", "deskripsi":"carousel 2 menjelaskan","background-url":"ini gambar 2"},
+      {"id":2,"judul":"ini carouser 3", "deskripsi":"carousel 3 menjelaskan","background-url":"ini gambar 3"}
     ],
     "dataCards": [
-        { "namaKegiatan": "maulid", "deskripsi": "ini kegiatan maulid" },
-        { "namaKegiatan": "konser", "deskripsi": "ini kegiatan konser" },
-        { "namaKegiatan": "festival", "deskripsi": "ini kegiatan festival" },
-        { "namaKegiatan": "maulid", "deskripsi": "ini kegiatan maulid" }
+        { "id":0,"namaKegiatan": "maulid", "deskripsi": "ini kegiatan maulid" },
+        { "id":1,"namaKegiatan": "konser", "deskripsi": "ini kegiatan konser" },
+        { "id":2,"namaKegiatan": "festival", "deskripsi": "ini kegiatan festival" },
+        { "id":3,"namaKegiatan": "maulid", "deskripsi": "ini kegiatan maulid" }
       ]
 
       
