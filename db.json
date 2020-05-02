@@ -1,8 +1,16 @@
 {
+    "menu":["beranda","profil","Ekstrakurikuler"],
+    "carousel":[
+      {"judul":"ini carouser 1", "deskripsi":"carousel 1 menjelaskan","background-url":"ini gambar 1"},
+      {"judul":"ini carouser 2", "deskripsi":"carousel 2 menjelaskan","background-url":"ini gambar 2"},
+      {"judul":"ini carouser 3", "deskripsi":"carousel 3 menjelaskan","background-url":"ini gambar 3"}
+    ],
     "dataCards": [
         { "namaKegiatan": "maulid", "deskripsi": "ini kegiatan maulid" },
         { "namaKegiatan": "konser", "deskripsi": "ini kegiatan konser" },
         { "namaKegiatan": "festival", "deskripsi": "ini kegiatan festival" },
         { "namaKegiatan": "maulid", "deskripsi": "ini kegiatan maulid" }
       ]
+
+      
 }
